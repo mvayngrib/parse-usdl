@@ -1,7 +1,7 @@
 
 # parse-usdl
 
-parse code128 barcode data from US driver licenses
+parse Pdf417 barcode data from US driver licenses
 
 ## Usage
 

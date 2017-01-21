@@ -2,7 +2,7 @@
   "name": "parse-usdl",
   "version": "1.0.0",
   "main": "index.js",
-  "description": "parse code128 barcode data from US driver licenses",
+  "description": "parse Pdf417 barcode data from US driver licenses",
   "repository": {
     "type": "git",
     "url": "https://github.com/mvayngrib/parse-usdl"
