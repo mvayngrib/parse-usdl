@@ -1,4 +1,4 @@
-const UsdlData_error = `@
+exports.UsdlData_error = `@
 
 ANSI 636001070002DL00410392ZN04330047DLDCANONE
 ZZZ
@@ -25,5 +25,3 @@ DDFN
 DDGN
 ZNZNAMDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5
 `;
-
-module.exports = {UsdlData_error};

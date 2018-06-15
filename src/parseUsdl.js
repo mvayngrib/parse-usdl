@@ -4,6 +4,7 @@ const lineSeparater = "\n";
 const beginningOfLineIndex = 0;
 
 const defaultOptions = {suppressErrors: false};
+
 exports.parse = function parseCode128(str, options = defaultOptions) {
   const props = {};
   const lines = str.trim().split(lineSeparater);

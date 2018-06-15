@@ -1,4 +1,4 @@
-const UsdlData1 = `@
+exports.UsdlData1 = `@
 
 ANSI 636001070002DL00410392ZN04330047DLDCANONE
 DCBNONE
@@ -24,5 +24,3 @@ DDFN
 DDGN
 ZNZNAMDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5
 `
-
-module.exports = {UsdlData1};
