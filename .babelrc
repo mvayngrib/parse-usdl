@@ -1,7 +1,14 @@
 {
   "env": {
     "test": {
-      "presets": [["env", { "modules": "commonjs" }]]
+      "presets": [
+        [
+          "env",
+          {
+            "modules": "commonjs"
+          }
+        ]
+      ]
     }
   }
 }

@@ -1,14 +1,14 @@
-import { CodeToKey } from "./keys";
+import {CodeToKey} from "./keys";
 
 const lineSeparater = "\n";
 const beginningOfLineIndex = 0;
 
-const defaultOptions = { suppressErrors: true };
+const defaultOptions = {suppressErrors: false};
 exports.parse = function parseCode128(str, options = defaultOptions) {
   const props = {};
   const lines = str.trim().split(lineSeparater);
   let started;
-  lines.forEach(line => {
+  lines.slice(0, -1).forEach(line => {
     if (!started) {
       if (line.indexOf("ANSI ") === beginningOfLineIndex) {
         started = true;

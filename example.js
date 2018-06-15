@@ -1,4 +1,3 @@
-
 const code = `@
 
 ANSI 636001070002DL00410392ZN04330047DLDCANONE
@@ -25,6 +24,6 @@ DDFN
 DDGN
 ZNZNAMDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5
 `
-const { parse } = require('./')
+const {parse} = require('./')
 const data = parse(code)
 console.log(JSON.stringify(data, null, 2))

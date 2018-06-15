@@ -1,5 +1,5 @@
-import { UsdlData1, UsdlData2, UsdlData_error } from "./sample/index";
-import { parse } from "../index";
+import {UsdlData1, UsdlData2, UsdlData_error} from "./sample/index";
+import {parse} from "../index";
 
 describe("USDL Parser", () => {
   it("should parse correct values", () => {
@@ -31,19 +31,21 @@ describe("USDL Parser", () => {
     const parsedData = parse(UsdlData2);
     expect(parsedData.sex).toBe("F");
 
-  })
+  });
 
   it("should not throw error if invalid code is passed and warming suppress is on", () => {
     function parseData() {
-      parse(UsdlData_error);
+      parse(UsdlData_error, {suppressErrors: true});
     }
+
     expect(parseData).not.toThrow();
   });
 
   it("should throw error if invalid code is passed", () => {
     function parseData() {
-      parse(UsdlData_error, { suppressErrors: false });
+      parse(UsdlData_error);
     }
+
     expect(parseData).toThrow(/unknown code: ZZZ/);
   });
 });
