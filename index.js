@@ -1,1 +1,3 @@
-export * from "./src/parseUsdl.js";
+const parse = require("./src/parseUsdl.js").parse;
+
+module.exports = {parse};

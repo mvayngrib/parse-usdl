@@ -1,5 +1,5 @@
 // Source: http://www.aamva.org/DL-ID-Card-Design-Standard/
-export const CodeToKey = {
+const CodeToKey = {
   DCA: 'jurisdictionVehicleClass',
   DCB: 'jurisdictionRestrictionCodes',
   DCD: 'jurisdictionEndorsementCodes',
@@ -52,3 +52,5 @@ export const CodeToKey = {
   DDK: 'organDonor',
   DDL: 'veteran'
 }
+
+module.exports = {CodeToKey};

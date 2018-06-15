@@ -1,5 +1,7 @@
-import {UsdlData1, UsdlData2, UsdlData_error} from "./sample/index";
-import {parse} from "../index";
+const UsdlData1 = require('./sample/index').UsdlData1;
+const UsdlData2 = require('./sample/index').UsdlData2;
+const UsdlData_error = require('./sample/index').UsdlData_error;
+const parse = require("../index").parse;
 
 describe("USDL Parser", () => {
   it("should parse correct values", () => {

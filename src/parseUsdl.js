@@ -1,4 +1,4 @@
-import {CodeToKey} from "./keys";
+const CodeToKey = require("./keys").CodeToKey;
 
 const lineSeparater = "\n";
 const beginningOfLineIndex = 0;
