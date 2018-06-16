@@ -1,8 +1,9 @@
 {
   "name": "parse-usdl",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "main": "index.js",
   "description": "parse Pdf417 barcode data from US driver licenses",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/mvayngrib/parse-usdl"
@@ -14,5 +15,12 @@
     "driver-license",
     "usdl"
   ],
-  "license": "MIT"
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "23.1.0"
+  },
+  "scripts": {
+    "test": "jest --coverage",
+    "test-watch": "jest --watch"
+  }
 }

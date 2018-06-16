@@ -33,7 +33,6 @@ DCGUSA
 DDEN
 DDFN
 DDGN
-ZNZNAMDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5
 `
 const data = parse(code)
 console.log(JSON.stringify(data, null, 2))
@@ -62,4 +61,16 @@ console.log(JSON.stringify(data, null, 2))
 //   "middleNameTruncated": "N"
 // }
 // ~/Co
+```
+
+## Optional Parameters
+
+
+#### suppressErrors
+Prevent a hard error in the case of a bad code provided. All valid codes will be parsed and returned.
+
+```javascript
+const options = {
+    suppressErrors: false
+}
 ```
