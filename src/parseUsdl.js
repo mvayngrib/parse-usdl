@@ -9,7 +9,7 @@ exports.parse = function parseCode128(str, options = defaultOptions) {
   const props = {};
   const lines = str.trim().split(lineSeparater);
   let started;
-  lines.slice(0, -1).forEach(line => {
+  lines.forEach(line => {
     if (!started) {
       if (line.indexOf("ANSI ") === beginningOfLineIndex) {
         started = true;
@@ -48,5 +48,5 @@ const isDateField = key => key.indexOf("date") === beginningOfLineIndex;
 
 const getDateFormat = value => {
   const parts = [value.slice(0, 2), value.slice(2, 4), value.slice(4)];
-  return new Date(parts.join("/")).getTime();
+  return parts.join("/");
 };

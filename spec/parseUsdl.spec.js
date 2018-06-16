@@ -10,9 +10,9 @@ describe("USDL Parser", () => {
     expect(parsedData.addressPostalCode).toBe("123450000");
     expect(parsedData.addressState).toBe("NY");
     expect(parsedData.addressStreet).toBe("2345 ANYWHERE STREET");
-    expect(parsedData.dateOfBirth).toBe(1377925200000);
-    expect(parsedData.dateOfExpiry).toBe(1377925200000);
-    expect(parsedData.dateOfIssue).toBe(1377925200000);
+    expect(parsedData.dateOfBirth).toBe('08/31/2013');
+    expect(parsedData.dateOfExpiry).toBe('08/31/2013');
+    expect(parsedData.dateOfIssue).toBe('08/31/2013');
     expect(parsedData.documentDiscriminator).toBe("NONE");
     expect(parsedData.documentNumber).toBe("NONE");
     expect(parsedData.eyeColor).toBe("BRO");
@@ -46,9 +46,9 @@ describe("USDL Parser", () => {
     expect(parsedData.addressPostalCode).toBe("123450000");
     expect(parsedData.addressState).toBe("NY");
     expect(parsedData.addressStreet).toBe("2345 ANYWHERE STREET");
-    expect(parsedData.dateOfBirth).toBe(1377925200000);
-    expect(parsedData.dateOfExpiry).toBe(1377925200000);
-    expect(parsedData.dateOfIssue).toBe(1377925200000);
+    expect(parsedData.dateOfBirth).toBe('08/31/2013');
+    expect(parsedData.dateOfExpiry).toBe('08/31/2013');
+    expect(parsedData.dateOfIssue).toBe('08/31/2013');
     expect(parsedData.documentDiscriminator).toBe("NONE");
     expect(parsedData.documentNumber).toBe("NONE");
     expect(parsedData.eyeColor).toBe("BRO");
