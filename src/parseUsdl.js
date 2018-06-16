@@ -1,17 +1,16 @@
 const CodeToKey = require("./keys").CodeToKey;
 
-const lineSeparater = "\n";
-const beginningOfLineIndex = 0;
+const lineSeparator = "\n";
 
 const defaultOptions = {suppressErrors: false};
 
 exports.parse = function parseCode128(str, options = defaultOptions) {
   const props = {};
-  const lines = str.trim().split(lineSeparater);
+  const lines = str.trim().split(lineSeparator);
   let started;
   lines.slice(0, -1).forEach(line => {
     if (!started) {
-      if (line.indexOf("ANSI ") === beginningOfLineIndex) {
+      if (line.indexOf("ANSI ") === 0) {
         started = true;
       }
       return;
@@ -44,7 +43,7 @@ const isSexField = code => code === "DBC";
 
 const getSex = (code, value) => (value === "1" ? "M" : "F");
 
-const isDateField = key => key.indexOf("date") === beginningOfLineIndex;
+const isDateField = key => key.indexOf("date") === 0;
 
 const getDateFormat = value => {
   const parts = [value.slice(0, 2), value.slice(2, 4), value.slice(4)];
