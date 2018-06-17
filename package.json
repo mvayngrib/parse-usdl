@@ -1,6 +1,6 @@
 {
   "name": "parse-usdl",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "main": "index.js",
   "description": "parse Pdf417 barcode data from US driver licenses",
   "license": "MIT",
