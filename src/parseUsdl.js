@@ -6,7 +6,8 @@ const defaultOptions = {suppressErrors: false};
 
 exports.parse = function parseCode128(str, options = defaultOptions) {
   const props = {};
-  const lines = str.trim().split(lineSeparator);
+  const rawLines = str.trim().split(lineSeparator);
+  const lines = rawLines.map(rawLine => sanitizeData(rawLine));
   let started;
   lines.slice(0, -1).forEach(line => {
     if (!started) {
@@ -34,6 +35,8 @@ exports.parse = function parseCode128(str, options = defaultOptions) {
 
   return props;
 };
+
+const sanitizeData = rawLine => rawLine.match(/[\011\012\015\040-\177]*/g).join('');
 
 const getCode = line => line.slice(0, 3);
 const getValue = line => line.slice(3);
