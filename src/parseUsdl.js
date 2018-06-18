@@ -36,7 +36,7 @@ exports.parse = function parseCode128(str, options = defaultOptions) {
   return props;
 };
 
-const sanitizeData = rawLine => rawLine.match(/[\011\012\015\040-\177]*/g).join('');
+const sanitizeData = rawLine => rawLine.match(/[\011\012\015\040-\177]*/g).join('').trim();
 
 const getCode = line => line.slice(0, 3);
 const getValue = line => line.slice(3);
