@@ -9,10 +9,12 @@ exports.parse = function parseDL(str, options = defaultOptions) {
   const rawLines = str.trim().split(lineSeparator);
   const lines = rawLines.map(rawLine => sanitizeData(rawLine));
   let started;
+  let iin;
   lines.forEach(line => {
     if (!started) {
       if (line.indexOf("ANSI ") === 0) {
         started = true;
+        props["iin"] = line.slice(5,11); // 6-digit Issuer Identification Numbers
       }
       return;
     }

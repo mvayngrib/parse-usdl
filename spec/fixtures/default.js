@@ -1,4 +1,5 @@
 exports.default = {
+  'iin': "636001",
   'addressCity': "YOUR CITY",
   'addressPostalCode': "123450000",
   'addressState': "NY",

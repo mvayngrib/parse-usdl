@@ -21,7 +21,7 @@ exports.CodeToKey = {
   DAQ: 'documentNumber',
   DAT: 'jurisdictionRestrictionCodes', // License Endorsements Code?
   DCF: 'documentDiscriminator',
-  DCG: 'issuer',
+  DCG: 'issuer', // Country Identification
   DCT: 'givenName',
   DDE: 'lastNameTruncated',
   DDF: 'firstNameTruncated',

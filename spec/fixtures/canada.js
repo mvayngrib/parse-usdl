@@ -1,4 +1,5 @@
 exports.canada = {
+  'iin': "990876",
   'addressCity': "YOUR CITY",
   'addressPostalCode': "A1B 2C3",
   'addressState': "AB",
