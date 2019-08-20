@@ -50,5 +50,7 @@ exports.CodeToKey = {
   DDI: 'dateAge19',
   DDJ: 'dateAge21',
   DDK: 'organDonor',
-  DDL: 'veteran'
+  DDL: 'veteran',
+  DCT: 'givenName',
+  DCH: 'federalCommercialVehicleCodes'
 }

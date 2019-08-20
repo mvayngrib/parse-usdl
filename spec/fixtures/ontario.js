@@ -1,0 +1,20 @@
+exports.ontario = {
+  jurisdictionRestrictionCodes: 'X',
+  jurisdictionEndorsementCodes: 'NONE',
+  dateOfExpiry: '08/07/2021',
+  lastName: 'LASTNAME,',
+  givenName: 'GIVENNAME',
+  dateOfIssue: '27/11/2018',
+  dateOfBirth: '08/07/1981',
+  sex: 'M',
+  eyeColor: 'NONE',
+  height: '178 cm',
+  addressStreet: 'ADDRESS1,',
+  addressCity: 'CITY',
+  addressState: 'PROVINCE',
+  addressPostalCode: 'X1X 1X1',
+  documentNumber: 'M0000-00000-00000',
+  documentDiscriminator: 'GG0000000',
+  issuer: 'CAN',
+  federalCommercialVehicleCodes: 'NONE'
+};

@@ -30,7 +30,13 @@ exports.parse = function parseCode128(str, options = defaultOptions) {
 
     if (isSexField(code)) value = getSex(code, value);
 
-    props[key] = isDateField(key) ? getDateFormat(value) : value;
+    props[key] = value;
+  });
+
+  Object.entries(props).forEach(([key, value]) => {
+    if (isDateField(key)) {
+      props[key] = getDateFormat(value, props.issuer);
+    }
   });
 
   return props;
@@ -48,7 +54,12 @@ const getSex = (code, value) => (value === "1" ? "M" : "F");
 
 const isDateField = key => key.indexOf("date") === 0;
 
-const getDateFormat = value => {
-  const parts = [value.slice(0, 2), value.slice(2, 4), value.slice(4)];
-  return parts.join("/");
+const getDateFormat = (value, issuer = "USA") => {
+  if (issuer === "USA") {
+    const parts = [value.slice(0, 2), value.slice(2, 4), value.slice(4)];
+    return parts.join("/");
+  } else if (issuer === "CAN") {
+    const parts = [value.slice(6), value.slice(4, 6), value.slice(0, 4)];
+    return parts.join("/");
+  }
 };
