@@ -5,8 +5,10 @@ exports.CodeToKey = {
   DCD: 'jurisdictionEndorsementCodes',
   DBA: 'dateOfExpiry',
   DCS: 'lastName',
+  DAB: 'lastName',
   DAC: 'firstName',
   DAD: 'middleName',
+  DAR: 'jurisdictionVehicleClass', // License Classification Code
   DBD: 'dateOfIssue',
   DBB: 'dateOfBirth',
   DBC: 'sex',
@@ -17,8 +19,10 @@ exports.CodeToKey = {
   DAJ: 'addressState',
   DAK: 'addressPostalCode',
   DAQ: 'documentNumber',
+  DAT: 'jurisdictionRestrictionCodes', // License Endorsements Code?
   DCF: 'documentDiscriminator',
-  DCG: 'issuer',
+  DCG: 'issuer', // Country Identification
+  DCT: 'givenName',
   DDE: 'lastNameTruncated',
   DDF: 'firstNameTruncated',
   DDG: 'middleNameTruncated',
