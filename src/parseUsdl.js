@@ -56,10 +56,10 @@ const isDateField = key => key.indexOf("date") === 0;
 
 const getDateFormat = (value, issuer = "USA") => {
   if (issuer === "USA") {
-    const parts = [value.slice(0, 2), value.slice(2, 4), value.slice(4)];
-    return parts.join("/");
+    const parts = [value.slice(4), value.slice(0, 2), value.slice(2, 4), ];
+    return parts.join("-");
   } else if (issuer === "CAN") {
-    const parts = [value.slice(6), value.slice(4, 6), value.slice(0, 4)];
-    return parts.join("/");
+    const parts = [value.slice(0, 4), value.slice(4, 6), value.slice(6), ];
+    return parts.join("-");
   }
 };
