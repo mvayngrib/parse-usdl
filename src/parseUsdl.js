@@ -1,6 +1,6 @@
 const CodeToKey = require("./keys").CodeToKey;
 
-const lineSeparator = "\n";
+const lineSeparator = /\r|\n/;
 
 const defaultOptions = {suppressErrors: false};
 
