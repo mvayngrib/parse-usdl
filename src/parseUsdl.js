@@ -53,6 +53,6 @@ const getSex = (code, value) => (value === '1' ? 'M' : 'F')
 const isDateField = (key) => key.indexOf('date') === 0
 
 const getDateFormat = (value) => {
-  const parts = [value.slice(0, 2), value.slice(2, 4), value.slice(4)]
-  return parts.join('/')
+  const [mm, dd, yyyy] = [value.slice(0, 2), value.slice(2, 4), value.slice(4)]
+  return `${yyyy}-${mm}-${dd}`
 }
