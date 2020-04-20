@@ -1,1 +1,1 @@
-exports.default = require('./default').default;
+exports.default = require('./default').default
