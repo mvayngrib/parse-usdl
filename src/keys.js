@@ -1,6 +1,6 @@
 // Source: http://www.aamva.org/DL-ID-Card-Design-Standard/
 exports.CodeToKey = {
-  DCA: 'jurisdictionVehicleClass',
+  DCT: 'lastNameAndMiddleName',
   DCB: 'jurisdictionRestrictionCodes',
   DCD: 'jurisdictionEndorsementCodes',
   DBA: 'dateOfExpiry',
