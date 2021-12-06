@@ -18,6 +18,7 @@ exports.CodeToKey = {
   DAJ: 'addressState',
   DAK: 'addressPostalCode',
   DAQ: 'documentNumber',
+  DLDAQ: 'documentNumberAlt',
   DCF: 'documentDiscriminator',
   DCG: 'issuer',
   DDE: 'lastNameTruncated',
