@@ -13,13 +13,21 @@ exports.parse = function parseCode128(str, options = defaultOptions) {
     if (!started) {
       if (line.indexOf('ANSI ') === 0) {
         started = true
+
+        // has DLDAQ
+        if(line.indexOf('DLDAQ') !== -1) {
+          const lineArray = line.split('DLDAQ')
+          line = 'DAQ' + lineArray[1]
+        }
+      } else {
+        return
       }
-      return
     }
 
     let code = getCode(line)
     let value = getValue(line)
     let key = getKey(code)
+
     if (!key) {
       if (options.suppressErrors) {
         return
