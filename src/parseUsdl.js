@@ -8,10 +8,11 @@ exports.parse = function parseCode128(str, options = defaultOptions) {
   const props = {}
   const rawLines = str.trim().split(lineSeparator)
   const lines = rawLines.map((rawLine) => sanitizeData(rawLine))
+  // console.log(lines)
   let started
   lines.slice(0, -1).forEach((line) => {
     if (!started) {
-      if (line.indexOf('ANSI ') === 0) {
+      if (line.indexOf('ANSI') === 0) {
         started = true
 
         // has DLDAQ
@@ -36,6 +37,13 @@ exports.parse = function parseCode128(str, options = defaultOptions) {
       } else {
         throw new Error('unknown code: ' + code)
       }
+    }
+
+    if (code === 'DAA') {
+      const nameArray = value.split(',')
+      props.firstName = nameArray[1]
+      props.lastName = nameArray[0]
+      props.middleName = nameArray[2]
     }
 
     if (isSexField(code)) value = getSex(code, value)

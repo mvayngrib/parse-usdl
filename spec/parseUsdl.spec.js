@@ -1,6 +1,7 @@
 const UsdlData1 = require('./sample/index').UsdlData1
 const UsdlData2 = require('./sample/index').UsdlData2
 const UsdlDataTN = require('./sample/index').UsdlDataTN
+const UsdlDataMS = require('./sample/index').UsdlDataMS
 const UsdlData_error = require('./sample/index').UsdlData_error
 const UsdlData_invalid_characters = require('./sample/index').UsdlData_invalid_characters
 const UsdlData_invalid_characters_2 = require('./sample/index').UsdlData_invalid_characters_2
@@ -12,6 +13,15 @@ describe('USDL Parser', () => {
   it('should parse correct values', () => {
     const parsedData = parse(UsdlData1)
     expect(parsedData).toEqual(default_fixture)
+  })
+
+  it('should parse MS correct values', () => {
+    const parsedData = parse(UsdlDataMS, { suppressErrors: true })
+    console.log({ parsedData })
+    expect(parsedData.documentNumber).toEqual('802926467')
+    expect(parsedData.firstName).toEqual('JANICE')
+    expect(parsedData.lastName).toEqual('SMITH')
+    expect(parsedData.middleName).toEqual('C')
   })
 
   it('should correctly identify female', () => {

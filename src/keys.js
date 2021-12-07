@@ -5,6 +5,7 @@ exports.CodeToKey = {
   DCB: 'jurisdictionRestrictionCodes',
   DCD: 'jurisdictionEndorsementCodes',
   DBA: 'dateOfExpiry',
+  DAA: 'fullName',
   DCS: 'lastName',
   DAC: 'firstName',
   DAD: 'middleName',
