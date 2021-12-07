@@ -1,6 +1,6 @@
 const UsdlData1 = require('./sample/index').UsdlData1
 const UsdlData2 = require('./sample/index').UsdlData2
-const UsdlData3 = require('./sample/index').UsdlData3
+const UsdlDataTN = require('./sample/index').UsdlDataTN
 const UsdlData_error = require('./sample/index').UsdlData_error
 const UsdlData_invalid_characters = require('./sample/index').UsdlData_invalid_characters
 const UsdlData_invalid_characters_2 = require('./sample/index').UsdlData_invalid_characters_2
@@ -20,7 +20,7 @@ describe('USDL Parser', () => {
   })
 
   it('should correctly identify DL', () => {
-    const parsedData = parse(UsdlData3, {suppressErrors: true})
+    const parsedData = parse(UsdlDataTN, { suppressErrors: true })
     expect(parsedData.documentNumber).toBe('099964088')
   })
 
