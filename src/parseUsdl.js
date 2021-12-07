@@ -8,7 +8,6 @@ exports.parse = function parseCode128(str, options = defaultOptions) {
   const props = {}
   const rawLines = str.trim().split(lineSeparator)
   const lines = rawLines.map((rawLine) => sanitizeData(rawLine))
-  // console.log(lines)
   let started
   lines.slice(0, -1).forEach((line) => {
     if (!started) {
