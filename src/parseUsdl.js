@@ -15,9 +15,11 @@ exports.parse = function parseCode128(str, options = defaultOptions) {
         started = true
 
         // has DLDAQ
-        if(line.includes('DLDAQ')) {
+        if (line.includes('DLDAQ')) {
           const lineArray = line.split('DLDAQ')
           line = 'DAQ' + lineArray[1]
+        } else {
+          return
         }
       } else {
         return
