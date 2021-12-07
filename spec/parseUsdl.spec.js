@@ -31,6 +31,7 @@ describe('USDL Parser', () => {
 
   it('should correctly identify DL', () => {
     const parsedData = parse(UsdlDataTN, { suppressErrors: true })
+
     expect(parsedData.documentNumber).toBe('099964088')
   })
 
