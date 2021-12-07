@@ -17,7 +17,6 @@ describe('USDL Parser', () => {
 
   it('should parse MS correct values', () => {
     const parsedData = parse(UsdlDataMS, { suppressErrors: true })
-    console.log({ parsedData })
     expect(parsedData.documentNumber).toEqual('802926467')
     expect(parsedData.firstName).toEqual('JANICE')
     expect(parsedData.lastName).toEqual('SMITH')
