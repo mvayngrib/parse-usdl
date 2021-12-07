@@ -1,5 +1,6 @@
 const UsdlData1 = require('./sample/index').UsdlData1
 const UsdlData2 = require('./sample/index').UsdlData2
+const UsdlData3 = require('./sample/index').UsdlData3
 const UsdlData_error = require('./sample/index').UsdlData_error
 const UsdlData_invalid_characters = require('./sample/index').UsdlData_invalid_characters
 const UsdlData_invalid_characters_2 = require('./sample/index').UsdlData_invalid_characters_2
@@ -16,6 +17,11 @@ describe('USDL Parser', () => {
   it('should correctly identify female', () => {
     const parsedData = parse(UsdlData2)
     expect(parsedData.sex).toBe('F')
+  })
+
+  it('should correctly identify DL', () => {
+    const parsedData = parse(UsdlData3, {suppressErrors: true})
+    expect(parsedData.documentNumber).toBe('099964088')
   })
 
   it('should not throw error if invalid code is passed and warming suppress is on', () => {
