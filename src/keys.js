@@ -1,5 +1,6 @@
 // Source: http://www.aamva.org/DL-ID-Card-Design-Standard/
 exports.CodeToKey = {
+  DCT: 'firstNameAndMiddleName',
   DCA: 'jurisdictionVehicleClass',
   DCB: 'jurisdictionRestrictionCodes',
   DCD: 'jurisdictionEndorsementCodes',
@@ -50,5 +51,5 @@ exports.CodeToKey = {
   DDI: 'dateAge19',
   DDJ: 'dateAge21',
   DDK: 'organDonor',
-  DDL: 'veteran'
+  DDL: 'veteran',
 }

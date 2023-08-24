@@ -1,1 +1,1 @@
-exports.parse = require("./src/parseUsdl.js").parse;
+exports.parse = require('./src/parseUsdl.js').parse

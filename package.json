@@ -1,6 +1,6 @@
 {
   "name": "parse-usdl",
-  "version": "2.0.2",
+  "version": "3.2.0",
   "main": "index.js",
   "description": "parse Pdf417 barcode data from US driver licenses",
   "license": "MIT",
@@ -15,11 +15,69 @@
     "driver-license",
     "usdl"
   ],
-  "dependencies": {},
-  "devDependencies": {
-    "jest": "23.1.0"
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": [
+      "standard",
+      "prettier",
+      "prettier/standard"
+    ],
+    "plugins": [
+      "jest"
+    ],
+    "env": {
+      "jest/globals": true
+    },
+    "globals": {
+      "fetch": true
+    },
+    "rules": {
+      "camelcase": "off",
+      "import/no-unresolved": "error",
+      "import/no-extraneous-dependencies": "error"
+    }
   },
+  "prettier": {
+    "printWidth": 100,
+    "semi": false,
+    "singleQuote": true,
+    "arrowParens": "always",
+    "trailingComma": "es5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "jest": {
+    "verbose": true
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.0.0",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.15.0",
+    "eslint-plugin-jest": "^22.5.1",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "husky": "^1.3.1",
+    "jest": "^24.8.0",
+    "lint-staged": "^8.1.1",
+    "prettier": "^1.16.1"
+  },
+  "dependencies": {},
   "scripts": {
+    "lint": "eslint .",
     "test": "jest --coverage",
     "test-watch": "jest --watch"
   }
