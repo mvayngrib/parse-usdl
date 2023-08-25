@@ -24,6 +24,11 @@ exports.CodeToKey = {
   DDF: 'firstNameTruncated',
   DDG: 'middleNameTruncated',
   // optional
+  DAA: 'CustomerFullName',
+  DAB: 'CustomerLastName',
+  DAR: 'LicenseClassificationCode',
+  DAS: 'LicenseRestrictionCode',
+  DAT: 'LicenseEndorsementsCode',
   DAZ: 'hairColor',
   DAH: 'addressStreet2',
   DCI: 'placeOfBirth',
